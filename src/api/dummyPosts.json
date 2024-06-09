@@ -20,12 +20,32 @@
       }
     ],
     "likes": 10,
-    "isLiked": false,
+    "isLiked": true,
     "isCommented": false
   },
   {
     "id": 2,
     "username": "user2",
+    "profilePic": "https://picsum.photos/id/22/150",
+    "imageUrl": "https://picsum.photos/500",
+    "caption": "Lovely sunset",
+    "comments": [
+      {
+        "username": "commenter3",
+        "text": "Wow!"
+      },
+      {
+        "username": "commenter4",
+        "text": "So nice!"
+      }
+    ],
+    "likes": 20,
+    "isLiked": false,
+    "isCommented": false
+  },
+  {
+    "id": 3,
+    "username": "user3",
     "profilePic": "https://picsum.photos/id/22/150",
     "imageUrl": "https://picsum.photos/500",
     "caption": "Lovely sunset",
