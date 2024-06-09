@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import {AppContainer, FetchDataLoader} from "./AppStyles";
+import Posts from "./components/Posts";
+import Header from "./components/Header";
+import {usePostsContext} from "./contexts/PostsContext";
+import {useEffect, useRef} from "react";
+import Stories from "./components/Stories";
+import Loader from "./components/Loader";
+import {Container} from "react-bootstrap";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+	const {state: {posts, stories}, actions, loaders} = usePostsContext();
+
+
+	let isMounted = useRef(false);
+
+	useEffect(() => {
+		if (!isMounted.current) {
+			actions.fetchData();
+			isMounted.current = true;
+		}
+	}, []);
+
+	return (
+		<AppContainer>
+			<Header/>
+			<Container>
+				{
+					loaders.fetchDataLoader &&
+					<FetchDataLoader>
+						<Loader/>
+					</FetchDataLoader>
+				}
+				<Stories stories={stories}/>
+				<Posts posts={posts}/>
+			</Container>
+		</AppContainer>
+	);
 }
 
 export default App;

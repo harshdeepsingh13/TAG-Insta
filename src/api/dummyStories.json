@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "username": "user1",
+    "profilePic": "https://picsum.photos/id/22/150",
+    "imageUrl": "https://picsum.photos/500"
+  },
+  {
+    "id": 2,
+    "username": "user2",
+    "profilePic": "https://picsum.photos/id/22/150",
+    "imageUrl": "https://picsum.photos/500"
+  }
+]

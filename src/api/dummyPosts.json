@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "username": "user1",
+    "profilePic": "https://picsum.photos/id/22/150",
+    "imageUrl": "https://picsum.photos/500",
+    "caption": "Beautiful view!",
+    "comments": [
+      {
+        "username": "commenter1",
+        "text": "Amazing!"
+      },
+      {
+        "username": "commenter2",
+        "text": "Love it!"
+      },
+      {
+        "username": "user1",
+        "text": "test comment!"
+      }
+    ],
+    "likes": 10,
+    "isLiked": false,
+    "isCommented": false
+  },
+  {
+    "id": 2,
+    "username": "user2",
+    "profilePic": "https://picsum.photos/id/22/150",
+    "imageUrl": "https://picsum.photos/500",
+    "caption": "Lovely sunset",
+    "comments": [
+      {
+        "username": "commenter3",
+        "text": "Wow!"
+      },
+      {
+        "username": "commenter4",
+        "text": "So nice!"
+      }
+    ],
+    "likes": 20,
+    "isLiked": false,
+    "isCommented": false
+  }
+]
